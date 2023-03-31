@@ -1,7 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const jest = require('jest');
 const app = express();
 const taskRoutes = require('./routes/task.js');
 const userRoutes = require('./routes/user.js');
@@ -14,7 +12,6 @@ const db = mongoose.connection;
 
 app.use('/task', taskRoutes);
 app.use('/user', userRoutes);
-
 
 
 app.listen(3000, () => {
