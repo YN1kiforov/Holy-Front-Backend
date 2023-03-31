@@ -8,7 +8,6 @@ require('dotenv').config();
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then(
 	console.log('connect DB')
 );
-const db = mongoose.connection;
 
 app.use('/task', taskRoutes);
 app.use('/user', userRoutes);

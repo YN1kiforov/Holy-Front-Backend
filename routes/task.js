@@ -12,4 +12,7 @@ router.put('/:id', taskController.updateTaskById);
 
 router.delete('/:id', taskController.deleteTaskById);
 
+router.post('/submit', taskController.checkTask);
+
+
 module.exports = router;
