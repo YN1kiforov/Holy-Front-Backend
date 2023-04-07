@@ -9,10 +9,11 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 	console.log('connect DB')
 );
 
+app.use(express.json());
 app.use('/task', taskRoutes);
 app.use('/user', userRoutes);
 
 
-app.listen(3000, () => {
-	console.log('Server is running on port 3000');
+app.listen(3001, () => {
+	console.log('Server is running on port 3001');
 });
