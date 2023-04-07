@@ -2,6 +2,7 @@ const Task = require('../models/task');
 
 exports.createTask = async (req, res) => {
 	try {
+		console.log(req.body)
 		const task = new Task(req.body);
 
 		await task.save();
@@ -23,6 +24,7 @@ exports.getTasks = async (req, res) => {
 };
 
 exports.getTaskById = async (req, res) => {
+	console.log(req.params)
 	try {
 		const { id } = req.params;
 
